@@ -12,6 +12,10 @@
     "lerna": "^7.3.0",
     "prettier": "^3.0.3"
   },
+  "scripts": {
+    "check-format": "prettier -c packages",
+    "check-lint": "eslint --ext .ts,.tsx,.js,.jsx packages"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
@@ -32,8 +36,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "prettier -c ",
-      "eslint ",
+      "prettier -c packages ",
+      "eslint --ext .ts,.tsx,.js,.jsx packages ",
       "bash -c tsc -p tsconfig.json --pretty --noEmit",
       "git add "
     ]

@@ -1,7 +1,6 @@
-const a=10
+const a = 10;
 
+console.log(a);
+a = 20;
 
-console.log(a)
-a=20;
-
-export default a
+export default a;
