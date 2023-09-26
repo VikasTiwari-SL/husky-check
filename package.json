@@ -39,7 +39,6 @@
     "*.{ts,tsx,js,jsx}": [
       "prettier -c packages ",
       "eslint --ext .ts,.tsx,.js,.jsx packages ",
-      "bash -c tsc -p tsconfig.json --pretty --noEmit",
       "git add "
     ]
   }

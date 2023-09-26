@@ -1,0 +1,20 @@
+{
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "prettier.configPath": ".prettierrc.json",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "prettier.requireConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true
+  },
+  "files.eol": "\n",
+  "files.associations": {
+    "*.env": "properties"
+  },
+  "todo-tree.tree.showBadges": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
