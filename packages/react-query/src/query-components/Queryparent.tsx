@@ -1,6 +1,8 @@
-import { Querychild } from './Querychild';
 import { useState } from 'react';
+
 import { useQuery } from 'react-query';
+
+import { Querychild } from './Querychild';
 // import ReactQuery from './ReactQuery';
 export type serverObj = {
   id: number;
@@ -18,7 +20,7 @@ export function Queryparent() {
 
     return jsondata;
   };
-  const data = useQuery('react-querydata', fetchDataFunction, {
+  const dataQuery = useQuery('react-querydata', fetchDataFunction, {
     cacheTime: 10000,
     staleTime: 10000,
     refetchOnMount: true, // if data is stale..if set to always will always refetch
@@ -31,18 +33,21 @@ export function Queryparent() {
       return [{ body: 1 }, { body: 2 }, { body: 3 }, { body: 1 }];
     },
   });
-  console.log(data);
+
   //   useEffect(() => {
   //     fetchDataFunction();
   //   }, []);
-  if (data.isLoading) {
+  if (dataQuery.isLoading) {
     return <div>...loading</div>;
-  } else if (data.isError) {
+  } else if (dataQuery.isError) {
     return <div>wtf</div>;
   } else {
     return (
       <div>
-        <button onClick={() => data.refetch()}> click me to refetch</button>
+        <button onClick={() => dataQuery.refetch()}>
+          {' '}
+          click me to refetch
+        </button>
         Queryparent lets see how state management becomes easy
         {serverState && Object.keys(serverState).length !== 0 ? (
           <Querychild serverState={serverState} />

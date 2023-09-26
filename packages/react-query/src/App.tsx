@@ -1,8 +1,10 @@
 import './App.css';
-import { Queryparent } from './query-components/Queryparent';
 import { QueryClientProvider, QueryClient } from 'react-query';
+
+import { Queryparent } from './query-components/Queryparent';
+
 const queryClient = new QueryClient();
-function App() {
+export function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -11,5 +13,3 @@ function App() {
     </>
   );
 }
-
-export default App;

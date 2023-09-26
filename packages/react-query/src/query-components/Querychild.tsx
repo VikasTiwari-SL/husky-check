@@ -1,9 +1,11 @@
 import { serverObj } from './Queryparent';
+
 type ChildType = {
   serverState: serverObj[];
 };
 export function Querychild({ serverState }: ChildType) {
   console.log('1');
+
   return (
     <div>
       Querychild
