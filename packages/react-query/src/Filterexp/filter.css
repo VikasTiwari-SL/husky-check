@@ -1,0 +1,24 @@
+#input-intel-div{
+    position:absolute;
+    background-color: transparent;
+    width:100%;
+    height: 30px;
+    right:0px;
+    top:200px;
+    
+    z-index: -2;
+}
+#input-intel-div:focus{border: 2px solid white;}
+input {
+    height: 30px;
+    border: transparent;
+    width:500px;
+}
+body #root{
+display: flex;
+
+height: 100vh;
+}
+#input-root{
+    position: relative;
+}

@@ -55,15 +55,78 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Animation for the wavy lines */
+.error{
+  font-size: 25px;
+padding:25px;
+border: white;
+line-height: 50px;
+text-decoration-line: underline;
+text-decoration-style:wavy;
+text-decoration-color: orange;
+text-underline-offset: 3px;
+
+}
+.editablediv{
+  text-decoration-line: underline;
+  text-decoration-style:wavy;
+  text-decoration-color: orange;
+  text-underline-offset: 5px;
+}
+.editablediv1{
+  text-decoration-line: underline;
+  text-decoration-style:wavy;
+  text-decoration-color: red;
+  text-underline-offset: 5px;
+}
+.editablediv2{
+  text-decoration-line: underline;
+  text-decoration-style:wavy;
+  text-decoration-color: green;
+  text-underline-offset: 5px;
+}
+
+.editablediv:focus{
+  border:2px solid white
+}
+.error.isprocessing{
+font-size: 25px;
+padding:25px;
+border: white;
+line-height: 50px;
+text-decoration-line: underline;
+text-decoration-style:wavy;
+text-decoration-color: orange;
+text-underline-offset: 3px;
+
+}
+#iserror{
+  font-size: 25px;
+  padding:25px;
+  border: white;
+  line-height: 50px;
+  text-decoration-line: underline;
+  text-decoration-style:wavy;
+  text-decoration-color: rgb(240, 10, 10);
+  text-underline-offset: 3px;
+  z-index: 100;
+  
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  .error.isok{
+    font-size: 25px;
+    padding:25px;
+    border: white;
+    line-height: 50px;
+    text-decoration-line: underline;
+    text-decoration-style:wavy;
+    text-decoration-color: green;
+    text-underline-offset: 3px;
+    
+    }
+
+
+.invalid {
+  font-size: 25px;
+padding:10px;
+  border: 2px solid rgb(247, 17, 40);
 }
